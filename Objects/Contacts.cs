@@ -10,11 +10,11 @@ namespace AddressBook.Objects
     private string _address;
     private static List<Contact> _instances = new List<Contact> {};
 
-    public Contact(string name, string phonenumber, string address)
+    public Contact(string newName, string newPhonenumber, string newAddress)
     {
-      _name = name;
-      _phonenumber = phonenumber;
-      _address = address;
+      _name = newName;
+      _phonenumber = newPhonenumber;
+      _address = newAddress;
     }
     public string GetName()
     {
@@ -24,7 +24,7 @@ namespace AddressBook.Objects
     {
       _name = newName;
     }
-    public string GetPhonenumer()
+    public string GetPhonenumber()
     {
       return _phonenumber;
     }
