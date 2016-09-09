@@ -9,7 +9,11 @@ namespace AddressBook
   {
     public HomeModule()
     {
-      Get["/"] = _ => HOME PAGE
+      Get["/"] = _ => {
+        return View["index.cshtml"];
+      };
+      // Get["/add_new_contact"] = _ => ADD A CONTACT FORM
+      // Get["/view_all_contacts"] = _ => VIEW ALL CONTACTS PAGE
     }
   }
 }

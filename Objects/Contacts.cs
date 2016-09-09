@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Contacts.Objects
+namespace AddressBook.Objects
 {
   public class Contact
   {
@@ -15,8 +15,6 @@ namespace Contacts.Objects
       _name = name;
       _phonenumber = phonenumber;
       _address = address;
-      _instances.Add(this);
-      _contact = new List<Contact>{};
     }
     public string GetName()
     {
@@ -32,7 +30,7 @@ namespace Contacts.Objects
     }
     public void SetPhonenumer(string newPhonenumer)
     {
-      _Phonenumer = newPhonenumer;
+      _phonenumber = newPhonenumer;
     }
     public string GetAddress()
     {
