@@ -23,7 +23,11 @@ namespace AddressBook
         newContact.Save();
         return View["contact_created.cshtml", newContact];
       };
-      // Get["/view_all_contacts"] = _ => VIEW ALL CONTACTS PAGE
+      Get["/view_all_contacts"] = _ => {
+        List<Contact> allContacts = Contact.GetAll();
+        return View["view_all_contacts.cshtml", allContacts];
+      };
+      // Post["/contacts_deleted"] = _ => confirmation contacts deleted page {}
     }
   }
 }
