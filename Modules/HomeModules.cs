@@ -27,7 +27,10 @@ namespace AddressBook
         List<Contact> allContacts = Contact.GetAll();
         return View["view_all_contacts.cshtml", allContacts];
       };
-      // Post["/contacts_deleted"] = _ => confirmation contacts deleted page {}
+      Post["/contacts_deleted"] = _ => {
+        Contact.ClearAll();
+        return View["contacts_deleted.cshtml"];
+      };
     }
   }
 }
